@@ -1,6 +1,124 @@
-<html>
-  <body>
-   <h1>Your Name Here</h1>
-   <h2> Your student code here</h2>
-  </body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNIBOX - กล่องอาหารรักษ์โลก</title>
+  <style>
+    body {
+      font-family: 'Prompt', sans-serif;
+      background-color: #f5f8ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 180px;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      color: #9B59B6;
+      font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      color: #7ED957;
+      margin-top: 0;
+      font-size: 1.3em;
+      font-weight: 400;
+    }
+
+    .product-img {
+      width: 100%;
+      max-width: 350px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .price {
+      font-size: 1.8em;
+      color: #27ae60;
+      margin: 10px 0;
+    }
+
+    .description {
+      font-size: 1.1em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .add-to-cart {
+      background-color: #7ED957;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #68c043;
+    }
+
+    input[type="number"] {
+      padding: 8px;
+      font-size: 1em;
+      width: 60px;
+      text-align: center;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      .add-to-cart {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="UNIBOX-Logo.png" alt="UNIBOX Logo" class="logo"> <!-- แทนด้วยชื่อไฟล์จริง -->
+
+    <h1>UNIBOX</h1>
+    <h2>green for everyone</h2>
+
+    <!-- Product -->
+    <img src="food-container.jpg" alt="กล่องอาหารรักษ์โลก" class="product-img"> <!-- แทนด้วยชื่อไฟล์จริง -->
+
+    <p class="price">5 บาท / ใบ</p>
+
+    <p class="description">
+      กล่องอาหารทำจากเยื่อธรรมชาติ 100% <br>
+      ย่อยสลายได้ เป็นมิตรต่อสิ่งแวดล้อม <br>
+      ทนร้อน ทนเย็น ปลอดภัยต่ออาหารทุกชนิด
+    </p>
+
+    จำนวน: <input type="number" min="1" value="1">
+    <br><br>
+
+    <button class="add-to-cart">🛒 เพิ่มลงตะกร้า</button>
+  </div>
+
+</body>
 </html>
