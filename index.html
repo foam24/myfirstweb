@@ -1,124 +1,200 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UNIBOX - กล่องอาหารรักษ์โลก</title>
-  <style>
-    body {
-      font-family: 'Prompt', sans-serif;
-      background-color: #f5f8ff;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unibox - บรรจุภัณฑ์รักษ์โลก</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      text-align: center;
-    }
+        .header {
+            background-color: #00704a;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .logo {
-      max-width: 180px;
-      margin: 0 auto 20px;
-    }
+        .logo {
+            max-height: 60px;
+        }
 
-    h1 {
-      color: #9B59B6;
-      font-size: 2em;
-      margin-bottom: 0.2em;
-    }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    h2 {
-      color: #7ED957;
-      margin-top: 0;
-      font-size: 1.3em;
-      font-weight: 400;
-    }
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00704a;
+        }
 
-    .product-img {
-      width: 100%;
-      max-width: 350px;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    .price {
-      font-size: 1.8em;
-      color: #27ae60;
-      margin: 10px 0;
-    }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 30%;
+            box-shadow: 0 0 8px rgba(0,0,0,0.05);
+        }
 
-    .description {
-      font-size: 1.1em;
-      color: #444;
-      line-height: 1.6;
-    }
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
 
-    .add-to-cart {
-      background-color: #7ED957;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 1.2em;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
+        .quantity {
+            width: 60px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
 
-    .add-to-cart:hover {
-      background-color: #68c043;
-    }
+        button {
+            background-color: #00704a;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-    input[type="number"] {
-      padding: 8px;
-      font-size: 1em;
-      width: 60px;
-      text-align: center;
-      border: 2px solid #ccc;
-      border-radius: 6px;
-      margin-left: 10px;
-    }
+        .cart {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 10px;
-      }
+        #cart-items li {
+            margin-bottom: 8px;
+        }
 
-      .add-to-cart {
-        width: 100%;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <!-- Logo -->
-    <img src="333.jpg" alt="UNIBOX Logo" class="logo"> <!-- แทนด้วยชื่อไฟล์จริง -->
+    <!-- โลโก้ -->
+    <header class="header">
+        <img src="333.jpg" alt="Unibox Logo" class="logo">
+    </header>
 
-    <h1>UNIBOX</h1>
-    <h2>green for everyone</h2>
+    <main class="container">
 
-    <!-- Product -->
-    <img src="222.jpg" alt="กล่องอาหารรักษ์โลก" class="product-img"> <!-- แทนด้วยชื่อไฟล์จริง -->
+        <h1 class="title">ผลิตภัณฑ์บรรจุภัณฑ์รักษ์โลก</h1>
 
-    <p class="price">5 บาท / ใบ</p>
+        <!-- สินค้า 3 ชิ้น -->
+        <div class="products">
 
-    <p class="description">
-      กล่องอาหารทำจากเยื่อธรรมชาติ 100% <br>
-      ย่อยสลายได้ เป็นมิตรต่อสิ่งแวดล้อม <br>
-      ทนร้อน ทนเย็น ปลอดภัยต่ออาหารทุกชนิด
-    </p>
+            <!-- สินค้า 1 -->
+            <div class="product-card">
+                <img src="Bigbox.jpg" alt="Unibox 50 ใบ" class="product-image">
+                <h2>Unibox 50 ใบ</h2>
+                <p>กล่องกระดาษรักษ์โลก เหมาะสำหรับร้านอาหารและเดลิเวอรี่</p>
+                <p class="price">ราคา: 250 บาท</p>
+                <input type="number" min="1" value="1" class="quantity">
+                <button onclick="addToCart('Unibox 50 ใบ', 250, this)">เพิ่มลงตะกร้า</button>
+            </div>
 
-    จำนวน: <input type="number" min="1" value="1">
-    <br><br>
+            <!-- สินค้า 2 -->
+            <div class="product-card">
+                <img src="Bowl.jpg" alt="Unibox ถ้วยซุป" class="product-image">
+                <h2>Unibox ถ้วยซุป</h2>
+                <p>ถ้วยกระดาษทนร้อน เหมาะสำหรับซุปหรืออาหารน้ำ</p>
+                <p class="price">ราคา: 180 บาท</p>
+                <input type="number" min="1" value="1" class="quantity">
+                <button onclick="addToCart('Unibox ถ้วยซุป', 180, this)">เพิ่มลงตะกร้า</button>
+            </div>
 
-    <button class="add-to-cart">🛒 เพิ่มลงตะกร้า</button>
-  </div>
+            <!-- สินค้า 3 -->
+            <div class="product-card">
+                <img src="Box.jpg" alt="Unibox ถุงกระดาษ" class="product-image">
+                <h2>Unibox กล่องขนาดมาตรฐาน</h2>
+                <p>กล่องอย่างดี </p>
+                <p class="price">ราคา: 100 บาท</p>
+                <input type="number" min="1" value="1" class="quantity">
+                <button onclick="addToCart('Unibox ถุงกระดาษ', 100, this)">เพิ่มลงตะกร้า</button>
+            </div>
 
+        </div>
+
+        <!-- ตะกร้าสินค้า -->
+        <section class="cart">
+            <h2>🛒 ตะกร้าสินค้า</h2>
+            <ul id="cart-items"></ul>
+            <p id="total">รวม: 0 บาท</p>
+            <button onclick="checkout()">สั่งซื้อ</button>
+        </section>
+
+    </main>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price, btn) {
+            const card = btn.closest('.product-card');
+            const quantityInput = card.querySelector('.quantity');
+            const quantity = parseInt(quantityInput.value);
+
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ name, price, quantity });
+            }
+
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartList = document.getElementById('cart-items');
+            cartList.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} x ${item.quantity} = ${item.price * item.quantity} บาท`;
+                cartList.appendChild(li);
+                total += item.price * item.quantity;
+            });
+
+            document.getElementById('total').textContent = `รวม: ${total} บาท`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("กรุณาเลือกสินค้าก่อนสั่งซื้อ");
+                return;
+            }
+
+            let summary = "คุณได้สั่งซื้อ:\n";
+            cart.forEach(item => {
+                summary += `- ${item.name} x ${item.quantity} = ${item.price * item.quantity} บาท\n`;
+            });
+
+            summary += `\nรวมทั้งสิ้น: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)} บาท`;
+
+            alert(summary);
+            cart = [];
+            renderCart();
+        }
+    </script>
 </body>
 </html>
